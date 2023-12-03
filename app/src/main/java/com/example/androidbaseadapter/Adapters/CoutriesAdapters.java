@@ -39,15 +39,22 @@ public class CoutriesAdapters extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
+
+        ViewHolderCountries holder;
         if (convertView == null){
             convertView = LayoutInflater.from(context).inflate(R.layout.countries_view,parent,false);
+            holder = new ViewHolderCountries();
+            holder.textView = convertView.findViewById(R.id.countries);
+            holder.imageView = convertView.findViewById(R.id.flags);
+            convertView.setTag(holder);
         }else{
-            holder = (ViewHolder) convertView.getTag();
+            holder = (ViewHolderCountries) convertView.getTag();
         }
+        holder.textView.setText(countries[position]);
+        holder.imageView.setImageResource(flags[position]);
         return convertView;
     }
-    static class ViewHolder{
+    static class ViewHolderCountries{
         ImageView imageView;
         TextView textView;
     }
