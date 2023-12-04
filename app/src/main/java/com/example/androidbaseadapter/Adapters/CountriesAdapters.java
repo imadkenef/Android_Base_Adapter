@@ -10,13 +10,13 @@ import android.widget.TextView;
 
 import com.example.androidbaseadapter.R;
 
-public class CoutriesAdapters extends BaseAdapter {
+public class CountriesAdapters extends BaseAdapter {
     private Context context;
     private String[] countries;
     private int[] flags;
 
 
-    public CoutriesAdapters(Context context, String[] countries, int[] flags) {
+    public CountriesAdapters(Context context, String[] countries, int[] flags) {
         this.context = context;
         this.countries = countries;
         this.flags = flags;

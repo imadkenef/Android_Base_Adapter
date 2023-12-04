@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.example.androidbaseadapter.Adapters.CoutriesAdapters;
+import com.example.androidbaseadapter.Adapters.CountriesAdapters;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,10 +28,9 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.jordon
         };
 
-        //
-        CoutriesAdapters coutriesAdapters = new CoutriesAdapters(this,counties,flags);
-
-        listView.setAdapter(coutriesAdapters);
+        //Link this Lists with aadpter.
+        CountriesAdapters countriesAdapters = new CountriesAdapters(this,counties,flags);
+        listView.setAdapter(countriesAdapters);
 
     }
 }
