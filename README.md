@@ -96,5 +96,5 @@
 
 4. Fourthly:
 > Link this Lists with aadpter.
-	CountriesAdapters countriesAdapters = new CountriesAdapters(this,counties,flags);
-    listView.setAdapter(countriesAdapters);
+		CountriesAdapters countriesAdapters = new CountriesAdapters(this,counties,flags);
+		listView.setAdapter(countriesAdapters);
